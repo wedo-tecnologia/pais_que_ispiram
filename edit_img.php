@@ -13,13 +13,15 @@
     <?php
         include('./connect/connect.php');
     ?>
-    <div class='org_site'>
-        <?php
-            include('./includes/topo/topo.php');
-        ?>
+        <div class='org_site'>
+            <?php
+                include('./includes/topo/topo2.php');
+            ?>
         <div class='titulo'>
             Imagens criadas na plataforma
         </div>
     </div>
+    <script type='module' src='./js/node_modules/jimp/browser/lib/jimp.js'></script>
+    <script type='module' src='./js/img.js'></script>
 </body>
 </html>
