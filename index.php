@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' href='./css/config.css'>
     <link rel='stylesheet' type='text/css' href='./css/index.css'>
+    <link rel='icon' href="./img/icon.png">
     <title>Pais que ispiram</title>
 </head>
 <body>
@@ -16,6 +17,9 @@
         <div class='topo'>
             <div class='logo_topo'>Pais que ispiram</div>
             <div class='button_topo'><button>Criar imagem</button></div>
+        </div>
+        <div class='titulo'>
+            Imagens criadas na plataforma
         </div>
     </div>
 </body>
