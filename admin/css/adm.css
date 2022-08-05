@@ -1,0 +1,69 @@
+.add_moldura {
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.campo {
+
+    margin:4vh;
+
+}
+
+.campo button {
+
+    width:20vw;
+    height:8vh;
+    border-radius:15px;
+    border-style:none;
+    background:var(--cor_1);
+    box-shadow:0 0 10px 2px var(--cor_1_sombra);
+    color:var(--cor_2);
+    font-size:20px;
+
+}
+
+.campo button:hover {
+
+    width:21vw;
+    height:9vh;
+    box-shadow:0 0 10px 5px var(--cor_1_sombra);
+
+}
+
+.campo button:active {
+
+    background:var(--cor_2);
+    box-shadow:0 0 10px 5px var(--cor_1_sombra);
+    color:var(--cor_1);
+
+}
+
+.molduras {
+
+    display:flex;
+    flex-direction:row;
+    word-wrap:break-word;
+    width:80vw;
+
+}
+
+.moldura {
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:15vw;
+    padding:10px;
+
+}
+
+.img_moldura img {
+
+    width:12vw;
+    margin:1vh;
+
+}
