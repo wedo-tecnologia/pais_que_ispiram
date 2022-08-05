@@ -1,0 +1,24 @@
+:root {
+
+    --cor_1:rgb(2, 128, 231);
+    --cor_1_sombra:rgba(1, 80, 145, 0.76);
+    --cor_2:#fff;
+    --cor_2_sombra:rgba(175, 175, 175, 0.705);
+
+    --font_default:Arial;
+    --font_1:Painter;
+    --font_2:Ubuntu;
+
+}
+
+@font-face {
+
+    font-family:Painter;
+    src: url(./fonts/Painter.ttf);
+
+}
+
+@font-face {
+    font-family:Ubuntu;
+    src: url(./fonts/Ubuntu-R.ttf);
+}
