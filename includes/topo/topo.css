@@ -1,19 +1,3 @@
-* {
-
-    margin:0px;
-    padding:0px;
-    font-family:var(--font_0);
-
-}
-
-.org_site {
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-}
-
 .topo {
 
     display:flex;
@@ -82,15 +66,5 @@
 .button_topo button:active {
 
     padding:13px;
-
-}
-
-.titulo {
-
-    margin-top:8vh;
-    margin-bottom:8vh;
-    color:var(--cor_1);
-    font-size:35px;
-    font-family:var(--font_2);
 
 }
