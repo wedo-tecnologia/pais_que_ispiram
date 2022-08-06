@@ -12,6 +12,8 @@
     --cor_1_sombra:rgba(1, 80, 145, 0.76);
     --cor_2:#fff;
     --cor_2_sombra:rgba(175, 175, 175, 0.705);
+    --cor_3:rgb(219, 15, 83);
+    --cor_3_sombra:rgba(163, 9, 60, 0.788);
 
     --font_0:Arial;
     --font_1:Painter;
@@ -36,6 +38,7 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    overflow:hidden;
 
 }
 

@@ -4,6 +4,8 @@
     flex-direction:row;
     justify-content:center;
     align-items:center;
+    overflow:hidden;
+    width:80vw;
 
 }
 
@@ -46,8 +48,11 @@
 
     display:flex;
     flex-direction:row;
-    word-wrap:break-word;
-    width:80vw;
+    flex-wrap:wrap;
+    justify-content:center;
+    word-break:break-all;
+    overflow:hidden;
+    width:90vw;
 
 }
 
@@ -56,14 +61,47 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    width:15vw;
+    width:20vw;
+    height:20vw;
     padding:10px;
+    margin:1vh;
+    overflow:hidden;
 
 }
 
 .img_moldura img {
 
-    width:12vw;
+    width:10vw;
+    height:16vw;
+    overflow:hidden;
+
+}
+
+.button_moldura button {
+
+    background:var(--cor_3);
+    box-shadow:0 0 10px 2px var(--cor_3_sombra);
+    color:var(--cor_2);
+    border-style:none;
+    border-radius:10px;
+    width:9vw;
     margin:1vh;
+    font-size:20px;
+    padding:10px;
+
+}
+
+.button_moldura button:hover {
+
+    width:10vw;
+    padding:12px;
+
+}
+
+.button_moldura button:active {
+
+    width:9vw;
+    background:var(--cor_2);
+    color:var(--cor_3);
 
 }

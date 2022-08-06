@@ -65,7 +65,7 @@
                         <div class='img_moldura'>
                             <img src='../{$data['dir']}'>
                         </div>
-                        <div>
+                        <div class='button_moldura'>
                             <form action='adm.php' method='POST'>
                                 <button type='submit' name='del_moldura' value='{$data['id']}'>Deletar</button>
                             </form>

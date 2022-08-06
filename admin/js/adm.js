@@ -13,3 +13,12 @@ b_env.addEventListener('click',()=>{
     }
     env.click();
 });
+
+setInterval(()=>{
+    if(f_moldura.files.item(0) == null || f_moldura.files.item(0) == '' || f_moldura.files.item(0) == ' '){
+        b_select.style = "background:var(--cor_1);box-shadow:0 0 10px 2px var(--cor_1_sombra);";
+    }
+    else {
+        b_select.style = "background:var(--cor_3);box-shadow:0 0 10px 2px var(--cor_3_sombra);";
+    }
+},500);
