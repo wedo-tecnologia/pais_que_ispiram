@@ -23,10 +23,7 @@
         </div>
         <div class='select_file'>
             <button id='b_file'>Selecionar arquivo</button>
-            <form action='edit_img.php' method='POST' enctype='multipart/form-data'>
-                <input type='file' name='f_img' class='inv' id='file' accept='image/*' max-size='10' required>
-                <button type='submit' class='inv' id='env_file'></button>
-            </form>
+            <input type='file' name='f_img' class='inv' id='file' accept='image/*' max-size='10' required>
         </div>
         <div class='im'>
             <img src id='img_edit'>
@@ -44,8 +41,12 @@
             ?>
         </div>
     </div>
+    <div class='inv' id='b_save'>
+        <a id='link_save'><button id='save'>Save</button></a>
+    </div>
     <div class='inv' id='load'>
         Loading...
+        <img src='./img/load.gif'>
     </div>
     <script type='module' src='./js/node_modules/jimp/browser/lib/jimp.js'></script>
     <script type='module' src='./js/img.js'></script>

@@ -1,6 +1,8 @@
 var load = document.querySelector("#load");
 var button_file = document.querySelector('#b_file');
-var button_env = document.querySelector('#env_file');
+var button_save = document.querySelector('#b_save');
+var save = document.querySelector('#save');
+var link_save = document.querySelector('#link_save');
 var file = document.querySelector('#file');
 var m_molduras = document.querySelectorAll('.moldura');
 var molduras = document.querySelectorAll('.m_img');
@@ -65,6 +67,7 @@ button_file.addEventListener('click',() => {
 
 window.addEventListener("DOMContentLoaded", () => {
     file.addEventListener("change",async () => {
+        Load();
         molduras.forEach((i) => {
             if(i.classList.contains('s_img')){
                 i.classList.remove('s_img');    
@@ -78,6 +81,9 @@ window.addEventListener("DOMContentLoaded", () => {
             img.src = image;
             img_or = img.src;
         }
+        button_save.classList.remove('inv')
+        button_save.classList.add('b_save')
+        setTimeout(()=>{noLoad();},2000);
     });
 });
 
@@ -88,6 +94,10 @@ setInterval(() => {
         m_molduras.forEach((item) => {
             item.classList.remove('inv');
         });
+        button_save.classList.remove('inv');
+        button_save.classList.add('b_save');
+        link_save.download = "img_edit.jpg";
+        link_save.href = img.src;
     }
     else{
         button_file.style = "background:var(--cor_1);box-shadow:4px 4px 10px 2px var(--cor_1_sombra);border-style:none;";
@@ -101,5 +111,9 @@ setInterval(() => {
         m_molduras.forEach((item) => {
             item.classList.add('inv');
         });
+        button_save.classList.add('inv');
+        button_save.classList.remove('b_save');
+        link_save.download = null;
+        link_save.href = null;
     }
 },500);

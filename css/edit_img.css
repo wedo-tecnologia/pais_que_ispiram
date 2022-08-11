@@ -115,3 +115,47 @@
     background:var(--cor_4);
 
 }
+
+.load img {
+
+    width:10vw;
+
+}
+
+.b_save {
+
+    display:flex;
+    justify-content:center;
+    margin:5vh;
+
+}
+
+.b_save button {
+
+    background:var(--cor_3);
+    box-shadow:0 0 10px 5px var(--cor_3_sombra);
+    color:var(--cor_2);
+    width:11vw;
+    height:6vh;
+    border-radius:10px;
+    border-style:none;
+    font-size:20px;
+
+}
+
+.b_save button:hover {
+
+    width:11.5vw;
+    height:7vh;
+    border-radius:15px;
+
+}
+
+.b_save button:active {
+
+    background:var(--cor_2);
+    color:var(--cor_3);
+    width:10.8vw;
+    height:6.8vh;
+
+}
