@@ -14,6 +14,7 @@
     --cor_2_sombra:rgba(175, 175, 175, 0.705);
     --cor_3:rgb(219, 15, 83);
     --cor_3_sombra:rgba(163, 9, 60, 0.788);
+    --cor_4:rgba(56, 56, 56, 0.616);
 
     --font_0:Arial;
     --font_1:Painter;
@@ -49,6 +50,12 @@
     color:var(--cor_1);
     font-size:35px;
     font-family:var(--font_2);
+
+}
+
+.s_img{
+
+    box-shadow:0 0 10px 5px var(--cor_3_sombra);
 
 }
 

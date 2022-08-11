@@ -36,13 +36,16 @@
                 $r = $con -> query('select * from molduras');
                 while($data = mysqli_fetch_assoc($r)){
                     echo "
-                    <div class='moldura'>
-                        <img src='{$data['dir']}'>
+                    <div class='moldura inv'>
+                        <img src='{$data['dir']}' class='m_img'>
                     </div>
                     ";
                 }
             ?>
         </div>
+    </div>
+    <div class='inv' id='load'>
+        Loading...
     </div>
     <script type='module' src='./js/node_modules/jimp/browser/lib/jimp.js'></script>
     <script type='module' src='./js/img.js'></script>
