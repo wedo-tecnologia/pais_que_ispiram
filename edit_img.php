@@ -23,7 +23,7 @@
         </div>
         <div class='select_file'>
             <button id='b_file'>Selecionar arquivo</button>
-            <input type='file' name='f_img' class='inv' id='file' accept='image/*' max-size='10' required>
+            <input type='file' class='inv' id='file' accept='image/*' max-size='10' required>
         </div>
         <div class='im'>
             <img src id='img_edit'>
@@ -40,9 +40,20 @@
                 }
             ?>
         </div>
-    </div>
-    <div class='inv' id='b_save'>
-        <a id='link_save'><button id='save'>Save</button></a>
+        <div class='inv' id='b_save'>
+            <a id='link_save'><button id='save'>Save</button></a>
+        </div>
+        <div>
+            <?php
+                if(isset($_FILES['f_img'])){
+                    $file = $_FILES['f_img'];
+                    $nome_file = uniqid();
+                    $dir = "uploads/{$nome_file}.jpg";
+                    $con -> query("insert into img_edit(dir) values('{$dir}')");
+                    move_uploaded_file($file['tmp_name'],'./'.$dir);
+                }
+            ?>
+        </div>
     </div>
     <div class='inv' id='load'>
         Loading...

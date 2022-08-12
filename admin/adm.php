@@ -37,6 +37,12 @@
                 unlink('../'.$dir);
                 $con -> query("delete from molduras where id = {$id}");
             }
+            else if(isset($_POST['del_image'])){
+                $id = strip_tags($con -> real_escape_string($_POST['del_image']));
+                $dir = (($con -> query("select dir from img_edit where id = {$id}")) -> fetch_assoc())['dir'];
+                unlink('../'.$dir);
+                $con -> query("delete from img_edit where id = {$id}");
+            }
         ?>
         <div class='titulo'>
             Gestão do site
@@ -68,6 +74,28 @@
                         <div class='button_moldura'>
                             <form action='adm.php' method='POST'>
                                 <button type='submit' name='del_moldura' value='{$data['id']}'>Deletar</button>
+                            </form>
+                        </div>
+                    </div>
+                    ";
+                }
+            ?>
+        </div>
+        <div class='titulo'>
+            Lista de imagens
+        </div>
+        <div class='imagens'>
+            <?php
+                $r = $con -> query("select * from img_edit");
+                while($data = ($r -> fetch_assoc())){
+                    echo "
+                    <div class='image'>
+                        <div class='img_edit'>
+                            <img src='../{$data['dir']}'>
+                        </div>
+                        <div class='button_moldura'>
+                            <form action='adm.php' method='POST'>
+                                <button type='submit' name='del_image' value='{$data['id']}'>Deletar</button>
                             </form>
                         </div>
                     </div>

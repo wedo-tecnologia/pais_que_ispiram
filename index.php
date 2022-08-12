@@ -21,6 +21,17 @@
         <div class='titulo'>
             Imagens criadas na plataforma
         </div>
+        <div class='image_edits'>
+            <?php
+                $r = $con -> query('select * from img_edit');
+                while($data = mysqli_fetch_assoc($r)){
+                    echo "
+                    <div class='img_edit'>
+                        <img src='./{$data['dir']}'>
+                    </div>";
+                }
+            ?>
+        </div>
     </div>
 </body>
 </html>

@@ -39,7 +39,6 @@ molduras.forEach((item) => {
         Jimp.read(item.src).then((im2) => {
             Jimp.read(img_or).then((im1) => {
                 var {width,height} = im1['bitmap'];
-                console.log(width,height);
                 im2.resize(width,height);
                 im2.quality(60);
                 im1.blit(im2,0,0);
@@ -85,6 +84,25 @@ window.addEventListener("DOMContentLoaded", () => {
         button_save.classList.add('b_save')
         setTimeout(()=>{noLoad();},2000);
     });
+});
+
+save.addEventListener("click",() => {
+    Load();
+    var formulario = new FormData();
+    var byteCharacters = atob(img.src.replace('data:image/jpeg;base64,',''));
+    var byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+    var byteArray = new Uint8Array(byteNumbers);
+    var f = new Blob([byteArray], {type:"image/jpg"});
+    formulario.append('f_img',f);
+    fetch("edit_img.php",{
+        method:"POST",
+        body:formulario
+    }).catch(console.erro);
+    setTimeout(()=>{noLoad();},2000);
+    setTimeout(()=>{window.alert('Pronto, o downlaod iniciado, e sua imagem foi salva!');location.href='/';},1000);
 });
 
 setInterval(() => {
