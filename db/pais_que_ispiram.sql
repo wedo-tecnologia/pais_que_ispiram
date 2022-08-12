@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Ago-2022 às 16:48
+-- Tempo de geração: 12-Ago-2022 às 21:56
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.1
 
@@ -31,14 +31,6 @@ CREATE TABLE `img_edit` (
   `id` int(11) NOT NULL,
   `dir` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `img_edit`
---
-
-INSERT INTO `img_edit` (`id`, `dir`) VALUES
-(4, 'uploads/62f6638b8b3db.jpg'),
-(5, 'uploads/62f66410aabab.jpg');
 
 -- --------------------------------------------------------
 
@@ -114,7 +106,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `img_edit`
 --
 ALTER TABLE `img_edit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `molduras`
