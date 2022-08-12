@@ -8,6 +8,7 @@ if(localStorage.getItem('login') == 'ok'){
 }
 else {
     location.href='/';
+    localStorage.clear()
 }
 
 b_select.addEventListener('click',()=>{

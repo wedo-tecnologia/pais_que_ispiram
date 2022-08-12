@@ -27,7 +27,7 @@
                         echo "<script>localStorage.setItem('login','ok');location.href = './adm.php'</script>";
                     }
                     else {
-                        echo "<script>window.alert('Usuario não existe ou dados incorretos');</script>";
+                        echo "<script>localStorage.clear();window.alert('Usuario não existe ou dados incorretos');</script>";
                         session_destroy();
                     }
                 }
