@@ -84,12 +84,12 @@
         <div class='titulo'>
             Lista de imagens
         </div>
-        <div class='imagens'>
+        <div class='image_edits'>
             <?php
                 $r = $con -> query("select * from img_edit");
                 while($data = ($r -> fetch_assoc())){
                     echo "
-                    <div class='image'>
+                    <div class='img_edit_all'>
                         <div class='img_edit'>
                             <img src='../{$data['dir']}'>
                         </div>

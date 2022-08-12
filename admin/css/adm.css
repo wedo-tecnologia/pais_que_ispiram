@@ -106,33 +106,43 @@
 
 }
 
-.imagens {
+.image_edits {
 
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:center;
-    word-break:break-all;
-    overflow:hidden;
+    align-items:center;
     width:90vw;
 
 }
 
-.image {
+.img_edit_all {
 
     display:flex;
     flex-direction:column;
+    justify-content:space-between;
     align-items:center;
-    width:20vw;
-    padding:10px;
-    margin:1vh;
-    overflow:hidden;
+    max-width:13vw;
+    height:18vw;
+
+}
+
+.img_edit {
+
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    width:12.5vw;
+    height:12.5vw;
+    margin:1vw;
 
 }
 
 .img_edit img {
 
-    width:10vw;
-    overflow:hidden;
+    max-width:12vw;
+    max-height:12vw;
 
 }
