@@ -3,6 +3,13 @@ var b_env = document.querySelector('#b_add_mod');
 var f_moldura = document.querySelector('#moldura');
 var env = document.querySelector('#b_env');
 
+if(localStorage.getItem('login') == 'ok'){
+    window.alert('Seja bem vindo');
+}
+else {
+    location.href='/';
+}
+
 b_select.addEventListener('click',()=>{
     f_moldura.click();
 });

@@ -24,10 +24,7 @@
                 $r = ($con -> query("select id,nome from users where email = '{$email}' and senha = '{$senha}'")) -> fetch_assoc();
                 if($r != null){
                     if(count($r) == 2){
-                        $_SESSION['acesso'] = "ok";
-                        $_SESSION['nome'] = $r['nome'];;
-                        $_SESSION['email'] = $email;
-                        echo "<script>location.href = './adm.php'</script>";
+                        echo "<script>localStorage.setItem('login','ok');location.href = './adm.php'</script>";
                     }
                     else {
                         echo "<script>window.alert('Usuario não existe ou dados incorretos');</script>";

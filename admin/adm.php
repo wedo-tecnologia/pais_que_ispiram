@@ -12,12 +12,7 @@
 </head>
 <body>
     <?php
-        session_start();
         include('../connect/connect.php');
-        if(isset($_SESSION['acesso']) and isset($_SESSION['nome']) and isset($_SESSION['email']) and $_SESSION['acesso'] == 'ok'){}
-        else {
-            echo "<script>window.alert('Tentativa de burlar');location.href='/';</script>";
-        }
     ?>
     <div class='org_site'>
         <?php
