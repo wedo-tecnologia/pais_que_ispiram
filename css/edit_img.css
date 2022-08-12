@@ -159,3 +159,71 @@
     height:6.8vh;
 
 }
+
+@media only screen and (min-width:200px) and (max-width:520px) {
+
+    .select_file button {
+
+        width:65vw;
+
+    }
+
+    .select_file button:hover {
+
+        width:66vw;
+
+    }
+
+    .select_file button:active {
+
+        width:64.5vw;
+
+    }
+
+    .molduras {
+
+        width:90vw;
+        padding:0px;
+        margin-left:-8vh;
+
+    }
+
+    .moldura {
+
+        width:30.5vw;
+        height:40.5vw;
+
+    }
+
+    .moldura img {
+
+        width:30vw;
+        height:40vw;
+
+    }
+
+    .b_save {
+
+        margin-top:8vh;
+
+    }
+
+    .b_save button {
+
+        width:40vw;
+
+    }
+
+    .b_save button:hover {
+
+        width:41vw;
+
+    }
+
+    .b_save button:active {
+
+        width:39.5vw;
+
+    }
+
+}

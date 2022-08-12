@@ -146,3 +146,79 @@
     max-height:12vw;
 
 }
+
+@media only screen and (min-width:200px) and (max-width:520px) {
+
+    .add_moldura {
+
+        flex-direction:column;
+
+    }
+
+    .campo button {
+
+        width:40vw;
+
+    }
+
+    .campo button:hover {
+
+        width:41vw;
+
+    }
+    
+    .moldura {
+    
+        width:35vw;
+        height:40vw;
+        padding:10px;
+    
+    }
+    
+    .img_moldura img {
+    
+        width:20vw;
+        height:26vw;
+    
+    }
+    
+    .button_moldura button {
+    
+        width:35vw;
+    
+    }
+    
+    .button_moldura button:hover {
+    
+        width:36vw;
+    
+    }
+    
+    .button_moldura button:active {
+    
+        width:34.5vw;
+    
+    }
+
+    .img_edit_all {
+
+        max-width:40vw;
+        height:40vw;
+    
+    }
+    
+    .img_edit {
+    
+        width:20.5vw;
+        height:20.5vw;
+
+    }
+    
+    .img_edit img {
+    
+        max-width:20vw;
+        max-height:20vw;
+    
+    }
+
+}

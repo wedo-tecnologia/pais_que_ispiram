@@ -68,3 +68,40 @@
     padding:13px;
 
 }
+
+@media only screen and (min-width:200px) and (max-width:520px) {
+
+    .logo_topo {
+
+        font-size:20px;
+        margin-top:4vh;
+        margin-left:6vw;
+
+    }
+
+    .button_topo {
+
+        margin-top:2.5vh;
+
+    }
+
+    .button_topo button {
+
+        padding:8px;
+
+    }
+
+    .button_topo button:hover {
+
+        padding:9px;
+        box-shadow:4px 5px 10px 5px var(--cor_2_sombra);
+    
+    }
+    
+    .button_topo button:active {
+    
+        padding:7.5px;
+    
+    }
+
+}

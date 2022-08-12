@@ -27,3 +27,21 @@
     max-height:12vw;
 
 }
+
+@media only screen and (min-width:200px) and (max-width:520px) {
+
+    .img_edit {
+
+        width:40.5vw;
+        height:40.5vw;
+
+    }
+
+    .img_edit img {
+
+        max-width:40vw;
+        max-height:40vw;
+    
+    }
+
+}
