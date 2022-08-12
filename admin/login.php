@@ -39,10 +39,6 @@
                     session_destroy();
                 }
             }
-            else if(isset($_POST['email']) or isset($_POST['senha'])){
-                echo "<script>window.alert('Tentativa de burlar');</script>";
-                session_destroy();
-            }
         ?>
         <div class='titulo'>
             Login
