@@ -23,7 +23,7 @@
         </div>
         <div class='select_file'>
             <button id='b_file'>Selecionar arquivo</button>
-            <input type='file' class='inv' id='file' accept='image/*' max-size='10' required>
+            <input type='file' class='inv' id='file' accept='image/*' required>
         </div>
         <div class='im'>
             <img src id='img_edit'>
