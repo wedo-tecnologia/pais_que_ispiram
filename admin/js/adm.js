@@ -3,9 +3,7 @@ var b_env = document.querySelector('#b_add_mod');
 var f_moldura = document.querySelector('#moldura');
 var env = document.querySelector('#b_env');
 
-if(localStorage.getItem('login') == 'ok'){
-    window.alert('Seja bem vindo');
-}
+if(localStorage.getItem('login') == 'ok'){}
 else {
     location.href='/';
     localStorage.clear()
