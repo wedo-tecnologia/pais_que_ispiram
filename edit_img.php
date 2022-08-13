@@ -16,7 +16,7 @@
     ?>
     <div class='org_site'>
         <?php
-            include('./includes/topo/topo3.php');
+            include('./includes/topo/topo2.php');
         ?>
         <div class='titulo'>
             Edição
