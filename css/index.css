@@ -95,6 +95,39 @@
 
 @media only screen and (min-width:200px) and (max-width:520px) {
 
+    .intro {
+
+        flex-direction:column;
+
+    }
+
+    .im_intro img {
+
+        width:80vw;
+        height:80vw;
+    
+    }
+
+    .texto_into {
+
+        width:80vw;
+    
+    }
+
+    .n_img {
+
+        
+        width:30vw;
+    
+    }
+    
+    .button_intro {
+    
+        width:70vw;
+        height:10vh;
+    
+    }
+
     .img_edit {
 
         width:40.5vw;
