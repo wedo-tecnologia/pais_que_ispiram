@@ -4,7 +4,6 @@
     flex-direction:row;
     justify-content:space-between;
     background: var(--cor_1);
-    box-shadow:0 4px 10px 6px var(--cor_1_sombra);
     width:100vw;
     height:12vh;
     overflow:hidden;
@@ -14,11 +13,35 @@
 .logo_topo {
 
     justify-content:flex-start;
-    color:var(--cor_2);
-    font-family:var(--font_1);
-    font-size:35px;
-    margin-top:2vh;
+
+}
+
+.logo_topo img {
+
+    width:13vw;
+    height:6vh;
+    margin-top:3vh;
     margin-left:4vw;
+
+}
+
+.lateral_menu {
+
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-top:4vh;
+    margin-right:3vw;
+    width:18vw;
+    font-size:20px;
+    color:var(--cor_2);
+
+}
+
+.lateral_menu a {
+
+    color:var(--cor_2);
+    text-decoration:none;
 
 }
 
@@ -30,17 +53,6 @@
 
 }
 
-.button_topo:hover {
-
-    margin-right:5vw;
-
-}
-
-.button_topo:active {
-
-    margin-right:5.5vw;
-
-}
 
 .button_topo button {
 
@@ -49,23 +61,17 @@
     border-radius:20px;
     font-size:20px;
     font-family:var(--font_2);
-    color:var(--cor_1);
-    background:var(--cor_2);
-    box-shadow:2px 2px 10px 4px var(--cor_2_sombra);
-
+    color:var(--cor_2);
+    background:var(--cor_1);
+    border-style:solid;
+    border-color:var(--cor_2);
 
 }
 
 .button_topo button:hover {
 
-    padding:20px;
-    box-shadow:4px 5px 10px 5px var(--cor_2_sombra);
-
-}
-
-.button_topo button:active {
-
-    padding:13px;
+    background:var(--cor_2);
+    color:var(--cor_1);
 
 }
 

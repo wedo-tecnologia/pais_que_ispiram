@@ -93,12 +93,6 @@
 
 }
 
-.moldura img:active {
-
-    box-shadow:0 0 10px 5px var(--cor_2_sombra);
-
-}
-
 .load {
 
     display:flex;

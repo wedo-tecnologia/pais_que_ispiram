@@ -16,7 +16,7 @@
     ?>
     <div class='org_site'>
         <?php
-            include('../includes/topo/topo.php');
+            include('../includes/topo/topo3.php');
             if(isset($_FILES['moldura'])){
                 $file = $_FILES['moldura'];
                 $tp = explode('.',$file['name']);

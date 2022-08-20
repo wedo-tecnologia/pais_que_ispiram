@@ -18,14 +18,14 @@
         <?php
             include('./includes/topo/topo.php');
         ?>
-        <div class='titulo'>
-            Pais que inspiram
-        </div>
         <div class='intro'>
             <div class='im_intro'>
-                <img src='./img/img_into.jpg'>
+                <img src='./img/PAIS-QUE-INSPIRAM.png'>
             </div>
             <div class='texto_into'>
+                <div class='titulo'>
+                    Pais que inspiram
+                </div>
                 <div class='texto'>
                     O olhar que fala<br>
                     As ações que modelam<br>
@@ -49,11 +49,8 @@
                         while($data = mysqli_fetch_assoc($r)){
                             $num = $num + 1;
                         }
-                        echo "<div class='n_img_t'>{$num}</div>";
+                        echo "<div class='n_img_t'>{$num} Fotos</div>";
                     ?>
-                    <div class='n_img_t'>
-                        Fotos
-                    </div>
                 </div>
                 <div class='b_c_img'>
                     <a href='./edit_img.php'><button class='button_intro'>Criar imagem</button></a>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Ago-2022 às 21:56
+-- Tempo de geração: 20-Ago-2022 às 17:20
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.1
 
@@ -32,6 +32,18 @@ CREATE TABLE `img_edit` (
   `dir` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `img_edit`
+--
+
+INSERT INTO `img_edit` (`id`, `dir`) VALUES
+(20, 'uploads/6300f8065007b.jpg'),
+(21, 'uploads/6300f82872b02.jpg'),
+(23, 'uploads/6300f85f45e0f.jpg'),
+(24, 'uploads/6300f88264368.jpg'),
+(25, 'uploads/6300f8d224f81.jpg'),
+(26, 'uploads/6300f92b3e246.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -48,11 +60,7 @@ CREATE TABLE `molduras` (
 --
 
 INSERT INTO `molduras` (`id`, `dir`) VALUES
-(8, 'uploads/62ee6e4420f4d.png'),
-(9, 'uploads/62ee6e48b32c0.png'),
-(10, 'uploads/62ee6e4dc703b.png'),
-(11, 'uploads/62ee6e5650435.png'),
-(14, 'uploads/62ee727bb7258.png');
+(28, 'uploads/6300f7c9b64cf.png');
 
 -- --------------------------------------------------------
 
@@ -106,13 +114,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `img_edit`
 --
 ALTER TABLE `img_edit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de tabela `molduras`
 --
 ALTER TABLE `molduras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de tabela `users`

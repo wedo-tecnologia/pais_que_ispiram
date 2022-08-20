@@ -17,7 +17,7 @@
     ?>
     <div class='org_site'>
         <?php
-            include('../includes/topo/topo.php');
+            include('../includes/topo/topo2.php');
             if(isset($_POST['email']) and isset($_POST['senha'])){
                 $email = strip_tags($con -> real_escape_string($_POST['email']));
                 $senha = md5(strip_tags($con -> real_escape_string($_POST['senha'])));
