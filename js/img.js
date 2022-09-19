@@ -8,8 +8,6 @@ var m_molduras = document.querySelectorAll('.moldura');
 var molduras = document.querySelectorAll('.m_img');
 var img = document.querySelector('#img_edit');
 var img_or = null;
-var rot = false;
-var rot2 = false;
 
 /*
 Jimp.read(image).then((im) => {
@@ -43,12 +41,6 @@ molduras.forEach((item) => {
                 im2.resize(1000,1000);
                 im2.quality(60);
                 im1.blit(im2,0,0);
-                if(rot){
-                    im1.rotate(-90);
-                }
-                else if(rot2){
-                    im1.rotate(-270);
-                }
                 im1.quality(60);
                 im1.getBase64(Jimp.AUTO,(err,src) => {
                     img.src = src;
@@ -65,44 +57,32 @@ button_file.addEventListener('click',() => {
 
 window.addEventListener("DOMContentLoaded", () => {
     file.addEventListener("change",async () => {
-        Load();
-        molduras.forEach((i) => {
-            if(i.classList.contains('s_img')){
-                i.classList.remove('s_img');    
-            }
-        });
-        var aq = file.files.item(0);
-        var read = new FileReader();
-        read.readAsDataURL(aq);
-        read.onload = (event) => {
-            Jimp.read(event.target.result).then((i) => {
-                var {width,height} = i['bitmap'];
-                i.resize(1000,1000);
-                if(height > width){
-                    if(height >= 3000 && height < 6000){
-                        i.rotate(-90);
-                        rot = true;
-                    }
-                    else if(height >= 5000){
-                        i.rotate(-270);
-                        rot2 = true;
-                    }
-                    else {
-                        rot = false;
-                    }
+        if(file.files.item(0) != null) {
+            Load();
+            molduras.forEach((i) => {
+                if(i.classList.contains('s_img')){
+                    i.classList.remove('s_img');    
                 }
-                i.quality(60)
-                i.getBase64(Jimp.AUTO,(err,src) => {
-                    img.src = src;
-                    img_or = src;
-                });
             });
-            img.src = image;
-            img_or = img.src;
+            var aq = file.files.item(0);
+            var read = new FileReader();
+            read.readAsDataURL(aq);
+            read.onload = (event) => {
+                Jimp.read(event.target.result).then((i) => {
+                    var {width,height} = i['bitmap'];
+                    console.log(width,height)
+                    i.resize(1000,1000);
+                    i.quality(60)
+                    i.getBase64(Jimp.AUTO,(err,src) => {
+                        img.src = src;
+                        img_or = src;
+                    });
+                });
+            }
+            button_save.classList.remove('inv')
+            button_save.classList.add('b_save')
+            setTimeout(()=>{noLoad();},5000);
         }
-        button_save.classList.remove('inv')
-        button_save.classList.add('b_save')
-        setTimeout(()=>{noLoad();},5000);
     });
 });
 
