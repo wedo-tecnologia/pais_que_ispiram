@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' href='./css/config.css'>
     <link rel='stylesheet' type='text/css' href='./includes/topo/topo.css'>
+    <link rel='stylesheet' type='text/css' href='css/fontawesome/css/all.css'>
     <link rel='stylesheet' type='text/css' href='./css/index.css'>
     <link rel='icon' href="./img/icon.png">
     <title>Pais que ispiram</title>
@@ -20,7 +21,7 @@
         ?>
         <div class='intro'>
             <div class='im_intro'>
-                <img src='./img/PAIS-QUE-INSPIRAM.png'>
+                <img src='./img/tocantins melhor Filtro Dra ÂngelaTransp.png'>
             </div>
             <div class='texto_into'>
                 <div class='titulo'>

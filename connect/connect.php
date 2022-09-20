@@ -1,6 +1,6 @@
 <?php
 
-    define('host','127.0.0.1');
+    define('host','mariadb');
     define('user','root');
     define('senha','');
     #nome da tabela

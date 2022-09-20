@@ -154,12 +154,22 @@
 
 }
 
+
+.btn_icone_girar_foto img{
+    padding: 20px;
+    width: 3vw;
+}
+
 @media only screen and (min-width:200px) and (max-width:520px) {
 
     .select_file button {
 
         width:65vw;
 
+    }
+
+    .btn_icone_girar_foto img{
+        width: 10vw;
     }
 
     .select_file button:hover {

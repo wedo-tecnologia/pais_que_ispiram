@@ -8,7 +8,7 @@
     <link rel='stylesheet' type='text/css' href='./includes/topo/topo.css'>
     <link rel='stylesheet' type='text/css' href='./css/edit_img.css'>
     <link rel='icon' href="./img/icon.png">
-    <title>Pais que ispiram</title>
+    <title>Ela Dra. Ângela 4410</title>
 </head>
 <body>
     <?php
@@ -27,6 +27,9 @@
         </div>
         <div class='im'>
             <img src id='img_edit'>
+        </div>
+        <div class="btn_icone_girar_foto">
+            <img src="img/girar-foto.svg">
         </div>
         <div class='molduras'>
             <?php

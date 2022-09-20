@@ -1,113 +1,69 @@
-.topo {
-
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    background: var(--cor_1);
-    width:100vw;
-    height:12vh;
-    overflow:hidden;
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.logo_topo {
-
-    justify-content:flex-start;
-
+.ds_none{
+    display: none !important;
 }
 
-.logo_topo img {
-
-    width:13vw;
-    height:6vh;
-    margin-top:3vh;
-    margin-left:4vw;
-
+.main_header{
+    width: 100%;
+    background-color: var(--cor_1);
+    z-index: 100;
 }
 
-.lateral_menu {
-
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    margin-top:4vh;
-    margin-right:3vw;
-    width:18vw;
-    font-size:20px;
-    color:var(--cor_2);
-
+.main_header .main_header_content{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
 }
 
-.lateral_menu a {
-
-    color:var(--cor_2);
-    text-decoration:none;
-
+.main_header .main_header_content .logo{
+    flex-basis: 240px;
+    padding: 10px;
+    max-width: 200px;
 }
 
-.button_topo {
+.main_header .main_header_content .logo img{
+    width: 100%;
+}
 
-    justify-content:flex-end;
-    margin-top:2vh;
-    margin-right:4vw;
+.main_header .main_header_content .main_header_content_menu{
+    flex-basis: calc(100% - 240px);
+    display: flex;
+    justify-content: flex-end;
+}
 
+.main_header_content_menu ul{
+    display: flex;
+    align-items: stretch;
+}
+
+.main_header_content_menu ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main_header_content_menu ul li a{
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--cor_2);
+}
+
+.main_header_content_menu ul li a:hover{
+    color: var(--cor_1);
+    background-color: var(--cor_2);
 }
 
 
-.button_topo button {
-
-    border-style:none;
-    padding:15px;
-    border-radius:20px;
-    font-size:20px;
-    font-family:var(--font_2);
-    color:var(--cor_2);
-    background:var(--cor_1);
-    border-style:solid;
-    border-color:var(--cor_2);
-
-}
-
-.button_topo button:hover {
-
-    background:var(--cor_2);
-    color:var(--cor_1);
-
-}
-
-@media only screen and (min-width:200px) and (max-width:520px) {
-
-    .logo_topo {
-
-        font-size:20px;
-        margin-top:4vh;
-        margin-left:6vw;
-
-    }
-
-    .button_topo {
-
-        margin-top:2.5vh;
-
-    }
-
-    .button_topo button {
-
-        padding:8px;
-
-    }
-
-    .button_topo button:hover {
-
-        padding:9px;
-        box-shadow:4px 5px 10px 5px var(--cor_2_sombra);
-    
-    }
-    
-    .button_topo button:active {
-    
-        padding:7.5px;
-    
-    }
-
+.btn_icone_girar_foto img{
+    min-width: 100px;
 }
