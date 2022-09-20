@@ -153,6 +153,18 @@ setInterval(() => {
 
 girar.addEventListener('click',() => {
     Load();
+    Jimp.read(img_or).then((item) => {
+        item.resize(1000,1000);
+        if(rot == true){
+            item.rotate(180);
+        }
+        else{
+            item.rotate(90);
+        }
+        item.getBase64(Jimp.AUTO,(err,src) => {
+            img_or = src;
+        });
+    });
     Jimp.read(img.src).then((item) => {
         item.resize(1000,1000);
         if(rot == true){
