@@ -29,7 +29,7 @@
             <img src id='img_edit'>
         </div>
         <div class="btn_icone_girar_foto">
-            <img src="img/girar-foto.svg">
+            <img src="img/girar-foto.svg" id='girar' class='inv'>
         </div>
         <div class='molduras'>
             <?php

@@ -7,7 +7,9 @@ var file = document.querySelector('#file');
 var m_molduras = document.querySelectorAll('.moldura');
 var molduras = document.querySelectorAll('.m_img');
 var img = document.querySelector('#img_edit');
+var girar = document.querySelector('#girar');
 var img_or = null;
+var rot = false;
 
 /*
 Jimp.read(image).then((im) => {
@@ -42,6 +44,9 @@ molduras.forEach((item) => {
                 im2.quality(60);
                 im1.blit(im2,0,0);
                 im1.quality(60);
+                if(rot == true){
+                    im1.rotate(270);
+                }
                 im1.getBase64(Jimp.AUTO,(err,src) => {
                     img.src = src;
                 });
@@ -69,8 +74,14 @@ window.addEventListener("DOMContentLoaded", () => {
             read.readAsDataURL(aq);
             read.onload = (event) => {
                 Jimp.read(event.target.result).then((i) => {
-                    var {width,height} = i['bitmap'];
-                    console.log(width,height)
+                    console.log(i['bitmap']['exifBuffer']['buffer'].byteLength);
+                    if(i['bitmap']['exifBuffer']['buffer'].byteLength > 1000000){
+                        rot = true;
+                        i.rotate(270);
+                    }
+                    else{
+                        rot = false;
+                    }
                     i.resize(1000,1000);
                     i.quality(60)
                     i.getBase64(Jimp.AUTO,(err,src) => {
@@ -114,6 +125,8 @@ setInterval(() => {
         });
         button_save.classList.remove('inv');
         button_save.classList.add('b_save');
+        girar.classList.remove('inv');
+        girar.classList.add('init');
         link_save.download = "img_edit.jpg";
         link_save.href = img.src;
     }
@@ -129,9 +142,28 @@ setInterval(() => {
         m_molduras.forEach((item) => {
             item.classList.add('inv');
         });
+        girar.classList.remove('init');
+        girar.classList.add('inv');
         button_save.classList.add('inv');
         button_save.classList.remove('b_save');
         link_save.download = null;
         link_save.href = null;
     }
 },500);
+
+girar.addEventListener('click',() => {
+    Load();
+    Jimp.read(img.src).then((item) => {
+        item.resize(1000,1000);
+        if(rot == true){
+            item.rotate(180);
+        }
+        else{
+            item.rotate(90);
+        }
+        item.getBase64(Jimp.AUTO,(err,src) => {
+            img.src = src;
+        });
+    });
+    setTimeout(()=>{noLoad();},5000);
+});
