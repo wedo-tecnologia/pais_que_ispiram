@@ -69,29 +69,34 @@ window.addEventListener("DOMContentLoaded", () => {
                     i.classList.remove('s_img');    
                 }
             });
-            var aq = file.files.item(0);
+            var aq = await file.files.item(0);
             var read = new FileReader();
             read.readAsDataURL(aq);
-            read.onload = (event) => {
-                Jimp.read(event.target.result).then((i) => {
-                    console.log(i['bitmap']['exifBuffer'].length);
-                    if(i['bitmap']['exifBuffer'].length > 10000){
-                        rot = true;
-                        i.rotate(270);
-                    }
-                    else{
-                        rot = false;
-                    }
-                    i.resize(1000,1000);
-                    i.quality(60)
-                    i.getBase64(Jimp.AUTO,(err,src) => {
+            read.onload = async(event) => {
+                Jimp.read(event.target.result).then(async (i) => {
+                    var {width,height,data} = i['bitmap'];
+                    if(width == height){
+                        try {
+                            if(i['bitmap']['exifBuffer'].length > 10000){
+                                rot = true;
+                                await i.rotate(270);
+                            }
+                            else{
+                                rot = false;
+                            }
+                        }
+                        catch (erro) {}
+                    }   
+                    await i.resize(1000,1000);
+                    await i.quality(60)
+                    await i.getBase64(Jimp.AUTO,(err,src) => {
                         img.src = src;
                         img_or = src;
                     });
                 });
             }
-            button_save.classList.remove('inv')
-            button_save.classList.add('b_save')
+            button_save.classList.remove('inv');
+            button_save.classList.add('b_save');
             setTimeout(()=>{noLoad();},5000);
         }
     });
