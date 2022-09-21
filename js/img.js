@@ -75,18 +75,16 @@ window.addEventListener("DOMContentLoaded", () => {
             read.onload = async(event) => {
                 Jimp.read(event.target.result).then(async (i) => {
                     var {width,height,data} = i['bitmap'];
-                    if(width == height){
-                        try {
-                            if(i['bitmap']['exifBuffer'].length > 10000){
-                                rot = true;
-                                await i.rotate(270);
-                            }
-                            else{
-                                rot = false;
-                            }
+                    try {
+                        if(i['bitmap']['exifBuffer'].length > 10000){
+                            rot = true;
+                            await i.rotate(270);
                         }
-                        catch (erro) {}
-                    }   
+                        else{
+                            rot = false;
+                        }
+                    }
+                    catch (erro) {}   
                     await i.resize(1000,1000);
                     await i.quality(60)
                     await i.getBase64(Jimp.AUTO,(err,src) => {
