@@ -74,8 +74,8 @@ window.addEventListener("DOMContentLoaded", () => {
             read.readAsDataURL(aq);
             read.onload = (event) => {
                 Jimp.read(event.target.result).then((i) => {
-                    console.log(i['bitmap']['exifBuffer']['buffer'].byteLength);
-                    if(i['bitmap']['exifBuffer']['buffer'].byteLength > 1000000){
+                    console.log(i['bitmap']['exifBuffer'].length);
+                    if(i['bitmap']['exifBuffer'].length > 10000){
                         rot = true;
                         i.rotate(270);
                     }
