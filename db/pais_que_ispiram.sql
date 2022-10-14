@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Set-2022 às 02:09
+-- Tempo de geração: 14-Out-2022 às 23:41
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.1
 
@@ -38,7 +38,7 @@ CREATE TABLE `img_edit` (
 
 INSERT INTO `img_edit` (`id`, `dir`) VALUES
 (27, 'uploads/6328f7031a9f9.jpg'),
-(28, 'uploads/632a56068ac98.jpg');
+(29, 'uploads/6349d76cd1eb7.jpg');
 
 -- --------------------------------------------------------
 
@@ -110,7 +110,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `img_edit`
 --
 ALTER TABLE `img_edit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de tabela `molduras`
