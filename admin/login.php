@@ -12,12 +12,12 @@
 </head>
 <body>
     <?php
-        session_start();
         include('../connect/connect.php');
     ?>
     <div class='org_site'>
         <?php
             include('../includes/topo/topo2.php');
+            echo "<script>localStorage.clear();</script>";
             if(isset($_POST['email']) and isset($_POST['senha'])){
                 $email = strip_tags($con -> real_escape_string($_POST['email']));
                 $senha = md5(strip_tags($con -> real_escape_string($_POST['senha'])));
@@ -28,12 +28,10 @@
                     }
                     else {
                         echo "<script>localStorage.clear();window.alert('Usuario não existe ou dados incorretos');</script>";
-                        session_destroy();
                     }
                 }
                 else {
-                    echo "<script>window.alert('Usuario não existe ou dados incorretos');</script>";
-                    session_destroy();
+                    echo "<script>localStorage.clear();window.alert('Usuario não existe ou dados incorretos');</script>";
                 }
             }
         ?>
