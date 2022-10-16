@@ -157,7 +157,7 @@ $('#salve').on('click',()=>{
         Swal.fire({
             icon:'error',
             title:'!Ops...',
-            text:'Erro ao salvar a imagem! A um erro no encode da imagem que você selecionou',
+            text:'Erro ao salvar a imagem! A um erro no encode da imagem que você selecionou...',
             showConfirmButton:false,
             timer:5000 
         });
