@@ -1,0 +1,253 @@
+@import '../../css/config.css';
+
+.titulo {
+
+    font-size:20px;
+
+}
+
+.titulo button {
+
+    margin:1vw;
+    width:6vw;
+    height:4vh;
+    font-size:18px;
+    border-radius:10px;
+    border-style:solid;
+    border-color:var(--cor_1);
+    background:var(--cor_1);
+    color:var(--cor_2)
+
+}
+
+.titulo button:hover {
+
+    background:none;
+    color:var(--cor_1)
+
+}
+
+.add_moldura {
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    width:80vw;
+
+}
+
+.campo {
+
+    margin:4vh;
+
+}
+
+.campo button {
+
+    width:20vw;
+    height:8vh;
+    border-radius:15px;
+    border-style:none;
+    background:var(--cor_1);
+    box-shadow:0 0 10px 2px var(--cor_1_sombra);
+    color:var(--cor_2);
+    font-size:20px;
+
+}
+
+.campo button:hover {
+
+    width:21vw;
+    height:9vh;
+    box-shadow:0 0 10px 5px var(--cor_1_sombra);
+
+}
+
+.campo button:active {
+
+    background:var(--cor_2);
+    box-shadow:0 0 10px 5px var(--cor_1_sombra);
+    color:var(--cor_1);
+
+}
+
+.molduras {
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    word-break:break-all;
+    overflow:hidden;
+    width:90vw;
+
+}
+
+.moldura {
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:20vw;
+    height:20vw;
+    padding:10px;
+    margin:1vh;
+    overflow:hidden;
+
+}
+
+.img_moldura img {
+
+    width:11vw;
+    height:11vw;
+    overflow:hidden;
+
+}
+
+.button_moldura button {
+
+    background:var(--cor_3);
+    box-shadow:0 0 10px 2px var(--cor_3_sombra);
+    color:var(--cor_2);
+    border-style:none;
+    border-radius:10px;
+    width:9vw;
+    margin:1vh;
+    font-size:20px;
+    padding:10px;
+
+}
+
+.button_moldura button:hover {
+
+    width:10vw;
+    padding:12px;
+
+}
+
+.button_moldura button:active {
+
+    width:9vw;
+    background:var(--cor_2);
+    color:var(--cor_3);
+
+}
+
+.image_edits {
+
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    width:90vw;
+
+}
+
+.img_edit_all {
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    max-width:13vw;
+    height:18vw;
+
+}
+
+.img_edit {
+
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    width:12.5vw;
+    height:12.5vw;
+    margin:1vw;
+
+}
+
+.img_edit img {
+
+    max-width:12vw;
+    max-height:12vw;
+
+}
+
+@media only screen and (min-width:200px) and (max-width:520px) {
+
+    .add_moldura {
+
+        flex-direction:column;
+
+    }
+
+    .campo button {
+
+        width:40vw;
+
+    }
+
+    .campo button:hover {
+
+        width:41vw;
+
+    }
+    
+    .moldura {
+    
+        width:35vw;
+        height:40vw;
+        padding:10px;
+    
+    }
+    
+    .img_moldura img {
+    
+        width:20vw;
+        height:26vw;
+    
+    }
+    
+    .button_moldura button {
+    
+        width:35vw;
+    
+    }
+    
+    .button_moldura button:hover {
+    
+        width:36vw;
+    
+    }
+    
+    .button_moldura button:active {
+    
+        width:34.5vw;
+    
+    }
+
+    .img_edit_all {
+
+        max-width:40vw;
+        height:40vw;
+    
+    }
+    
+    .img_edit {
+    
+        width:20.5vw;
+        height:20.5vw;
+
+    }
+    
+    .img_edit img {
+    
+        max-width:20vw;
+        max-height:20vw;
+    
+    }
+
+}
